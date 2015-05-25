@@ -104,24 +104,19 @@ TTUnitBox TTUnitBoxMake(TTBlockColor color) {
     UIButton *restartButton = [[UIButton alloc] init];
     frame.size = CGSizeMake(80, 40);
     frame.origin.y = 40.0;
-    frame.origin.x = self.view.frame.size.width - 10 - frame.size.width;
+    frame.origin.x = self.view.frame.size.width - 20 - frame.size.width;
     restartButton.frame = frame;
     restartButton.backgroundColor = [UIColor redColor];
-    restartButton.tintColor = [UIColor yellowColor];
-    restartButton.titleLabel.text = @"재시작";
     [restartButton addTarget:self action:@selector(startNewGame) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:restartButton];
-    [self startNewGame];
-    [self.view setNeedsDisplay];
+    
     
 }
 - (void)viewWillAppear:(BOOL)animated {
-
+    [self.tetrisView.gameManager startNewGame];
+    [self.view setNeedsDisplay];
 }
 
-- (void)viewDidDisappear:(BOOL)animated {
-    
-}
 
 #pragma mark - target action method
 - (void)moveLeft {
@@ -171,28 +166,8 @@ TTUnitBox TTUnitBoxMake(TTBlockColor color) {
 }
 
 
-- (void)startDropBlock {
-    @autoreleasepool {
-        NSLog(@"runloop");
-        NSRunLoop *runLoop = [NSRunLoop currentRunLoop];
-        self.progressTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(keepDropping) userInfo:nil repeats:YES];
-        [runLoop addTimer:self.progressTimer forMode:NSDefaultRunLoopMode];
-        [runLoop run];
-    }
-}
-
-- (void)keepDropping {
-    [self.gameManager moveCurrentBlockDown];
-    [self.view setNeedsDisplay];
-    
-}
-
 - (void)startNewGame {
-    if(self.progressTimer!=nil) {
-        [self.progressTimer invalidate];
-    }
-    [NSThread detachNewThreadSelector:@selector(startDropBlock) toTarget:self withObject:nil];
-
+    
     [self.tetrisView.gameManager startNewGame];
     [self.view setNeedsDisplay];
 }

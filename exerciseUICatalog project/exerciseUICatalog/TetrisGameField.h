@@ -26,7 +26,6 @@
 - (void)clearUnitAtRow:(int)row column:(int)column;
 - (void)clearUnitsInRow:(int)row;
 - (void)clearGameField;
-- (void)moveRow:(int)rowFrom toRow:(int)rowTo;
 - (void)moveDownRowsAboveRow:(int)row;
 - (void)moveUpperRowDown:(int)row;
 - (int)maxColumnIndex;

@@ -89,29 +89,13 @@ extern TTUnitBox TTUnitBoxMake(TTBlockColor color);
         }
     }
 }
-// 손 볼 것
-/*
-- (void)moveRow:(int)rowFrom toRow:(int)rowTo {
-    NSArray *boxesInRowFrom = self.coordinates[rowFrom];
-    NSArray *boxesInRowTo
-}
- */
+
 - (void)moveDownRowsAboveRow:(int)row {
     int i;
-    for(i = row; i<self.fieldSize.height-1; i++) {
+    for(i = row+1; i<self.fieldSize.height; i++) {
         [self moveUpperRowDown:i];
     }
 }
-
-// 손 볼 것
-/*
-- (void)fillEmptyRows {
-    int emptyCount = 0;
-    for(NSArray *boxesInRow in self.coordinates) {
-        
-    }
-}
- */
 
 - (void)moveUpperRowDown:(int)row {
     if(row<1) return;

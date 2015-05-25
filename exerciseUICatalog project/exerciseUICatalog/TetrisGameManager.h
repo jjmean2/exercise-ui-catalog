@@ -20,7 +20,7 @@
 @property (nonatomic, strong, readonly) NSMutableDictionary *colorSetting;
 @property (nonatomic) CGFloat boxLength;
 @property (nonatomic, setter=setFieldFrameInBounds:) CGRect fieldFrame;
-@property (atomic, strong) NSTimer *progressTimer;
+@property (nonatomic, strong) NSTimer *progressTimer;
 
 
 #pragma mark - init method
