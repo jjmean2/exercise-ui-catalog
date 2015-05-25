@@ -182,10 +182,6 @@ extern TTUnitBox TTUnitBoxMake(TTBlockColor color);
 
 #pragma mark - starter
 - (void)startNewGame {
-    
-//    [NSThread detachNewThreadSelector:@selector(startDropBlock) toTarget:self withObject:nil];
- //   self.progressTimer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector( userInfo:<#(id)#> repeats:<#(BOOL)#>]
-    
     [self.gameField clearGameField];
     self.currentBlock = [TetrisBlock randomBlock];
     self.currentBlock.markPosition = [self.gameField startPositionOfBlock];
@@ -193,7 +189,15 @@ extern TTUnitBox TTUnitBoxMake(TTBlockColor color);
 - (void)generateNewBlock {
     self.currentBlock = [TetrisBlock randomBlock];
     self.currentBlock.markPosition = [self.gameField startPositionOfBlock];
+    
+    if(![self block:self.currentBlock canMoveToMarkPosition:self.currentBlock.markPosition]) {
+        
+    }
 }
+
+
+
+
 
 #pragma mark - setter
 - (void)configureGame {
