@@ -176,14 +176,18 @@ TTUnitBox TTUnitBoxMake(TTBlockColor color) {
         NSLog(@"runloop");
         NSRunLoop *runLoop = [NSRunLoop currentRunLoop];
         self.progressTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(keepDropping) userInfo:nil repeats:YES];
-        [runLoop addTimer:self.progressTimer forMode:NSDefaultRunLoopMode];
+//        [runLoop addTimer:self.progressTimer forMode:NSDefaultRunLoopMode];
         [runLoop run];
     }
 }
 
 - (void)keepDropping {
-    [self.gameManager moveCurrentBlockDown];
-    [self.view setNeedsDisplay];
+    [self.gameManager performSelectorOnMainThread:@selector(moveCurrentBlockDown) withObject:nil waitUntilDone:YES];
+//    [self.gameManager moveCurrentBlockDown];
+
+    
+    [self.view performSelectorOnMainThread:@selector(setNeedsDisplay) withObject:nil waitUntilDone:NO];
+//    [self.view setNeedsDisplay];
     
 }
 
