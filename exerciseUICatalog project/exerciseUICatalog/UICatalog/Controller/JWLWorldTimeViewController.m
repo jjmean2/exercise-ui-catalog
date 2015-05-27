@@ -176,7 +176,9 @@
     self.timeOfSelectedCity.text = [self.selectedFormatter stringFromDate:now];
     
     [NSThread detachNewThreadSelector:@selector(startTimer) toTarget:self withObject:nil];
-
+    
+//    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(updateTime) userInfo:nil repeats:YES];
+//    self.timer = timer;
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
@@ -194,18 +196,25 @@
         NSRunLoop *runLoop = [NSRunLoop currentRunLoop];
         [runLoop  addTimer:timer forMode:NSDefaultRunLoopMode];
         NSLog(@"hi");
+        
         [runLoop run];
+        
 
 
 
     }
 }
 
+
 - (void)updateTime {
     NSLog(@"updateTime");
     NSDate *now = [NSDate date];
-    self.timeOfCurrentCity.text = [self.formatter stringFromDate:now];
-    self.timeOfSelectedCity.text = [self.selectedFormatter stringFromDate:now];
+//    self.timeOfCurrentCity.text = [self.formatter stringFromDate:now];
+//    self.timeOfSelectedCity.text = [self.selectedFormatter stringFromDate:now];
+
+    [self.timeOfCurrentCity performSelectorOnMainThread:@selector(setText:) withObject:[self.formatter stringFromDate:now] waitUntilDone:NO];
+    [self.timeOfSelectedCity performSelectorOnMainThread:@selector(setText:) withObject:[self.selectedFormatter stringFromDate:now] waitUntilDone:NO];
+
 }
 
 #pragma mark - picker view data source
@@ -224,9 +233,10 @@
 
 - (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view {
     UILabel *label = [[UILabel alloc] init];
-    CGRect frame;
-    frame.size = [pickerView rowSizeForComponent:0];
-    label.frame = frame;
+//    CGRect frame;
+//    frame.size = [pickerView rowSizeForComponent:0];
+//    label.frame = frame;
+    label.frame = CGRectMake(0, 0, 320, 44);
     
     label.textAlignment = NSTextAlignmentCenter;
     label.text = self.cityNames[row];

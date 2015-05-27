@@ -182,12 +182,12 @@ TTUnitBox TTUnitBoxMake(TTBlockColor color) {
 }
 
 - (void)keepDropping {
-    [self.gameManager performSelectorOnMainThread:@selector(moveCurrentBlockDown) withObject:nil waitUntilDone:YES];
-//    [self.gameManager moveCurrentBlockDown];
+//    [self.gameManager performSelectorOnMainThread:@selector(moveCurrentBlockDown) withObject:nil waitUntilDone:YES];
+    [self.gameManager moveCurrentBlockDown];
 
     
-    [self.view performSelectorOnMainThread:@selector(setNeedsDisplay) withObject:nil waitUntilDone:NO];
-//    [self.view setNeedsDisplay];
+//    [self.view performSelectorOnMainThread:@selector(setNeedsDisplay) withObject:nil waitUntilDone:NO];
+    [self.view setNeedsDisplay];
     
 }
 
@@ -195,8 +195,11 @@ TTUnitBox TTUnitBoxMake(TTBlockColor color) {
     if(self.progressTimer!=nil) {
         [self.progressTimer invalidate];
     }
-    [NSThread detachNewThreadSelector:@selector(startDropBlock) toTarget:self withObject:nil];
+//  [NSThread detachNewThreadSelector:@selector(startDropBlock) toTarget:self withObject:nil];
 
+    self.progressTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(keepDropping) userInfo:nil repeats:YES];
+
+    
     [self.tetrisView.gameManager startNewGame];
     [self.view setNeedsDisplay];
 }
