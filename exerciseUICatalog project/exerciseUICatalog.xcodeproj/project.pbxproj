@@ -119,8 +119,7 @@
 		72BBB7181B2679680096924F /* x_icon_2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 72BBB6A91B2679680096924F /* x_icon_2x.png */; };
 		72BBB7191B2679680096924F /* x_icon_3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 72BBB6AA1B2679680096924F /* x_icon_3x.png */; };
 		72BBB71A1B2679680096924F /* ximage.png in Resources */ = {isa = PBXBuildFile; fileRef = 72BBB6AB1B2679680096924F /* ximage.png */; };
-		72BBB71B1B2679680096924F /* Test.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72BBB6AD1B2679680096924F /* Test.xib */; };
-		72BBB71D1B2679E20096924F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72BBB71C1B2679E20096924F /* Main.storyboard */; };
+		72BBB72E1B26E3240096924F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72BBB71C1B2679E20096924F /* Main.storyboard */; };
 		72DF027A1AFB415000BBE4A5 /* exerciseUICatalogTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 72DF02791AFB415000BBE4A5 /* exerciseUICatalogTests.m */; };
 /* End PBXBuildFile section */
 
@@ -299,7 +298,6 @@
 		72BBB6A91B2679680096924F /* x_icon_2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = x_icon_2x.png; sourceTree = "<group>"; };
 		72BBB6AA1B2679680096924F /* x_icon_3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = x_icon_3x.png; sourceTree = "<group>"; };
 		72BBB6AB1B2679680096924F /* ximage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ximage.png; sourceTree = "<group>"; };
-		72BBB6AD1B2679680096924F /* Test.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Test.xib; sourceTree = "<group>"; };
 		72BBB71C1B2679E20096924F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		72DF025A1AFB415000BBE4A5 /* exerciseUICatalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = exerciseUICatalog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72DF02731AFB415000BBE4A5 /* exerciseUICatalogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = exerciseUICatalogTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -588,7 +586,6 @@
 		72BBB6AC1B2679680096924F /* UserInterface */ = {
 			isa = PBXGroup;
 			children = (
-				72BBB6AD1B2679680096924F /* Test.xib */,
 				72BBB71C1B2679E20096924F /* Main.storyboard */,
 			);
 			path = UserInterface;
@@ -711,6 +708,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72BBB72E1B26E3240096924F /* Main.storyboard in Resources */,
 				72BBB6E01B2679680096924F /* bookmark_icon_2x.png in Resources */,
 				72BBB6E51B2679680096924F /* checkmark_icon_1x.png in Resources */,
 				72BBB7111B2679680096924F /* toolbar_background_1x.png in Resources */,
@@ -718,7 +716,6 @@
 				72BBB6F41B2679680096924F /* slider_blue_track_2x.png in Resources */,
 				72BBB6F31B2679680096924F /* slider_blue_track_1x.png in Resources */,
 				72BBB7021B2679680096924F /* stepper_and_segment_background_highlighted_1x.png in Resources */,
-				72BBB71B1B2679680096924F /* Test.xib in Resources */,
 				72BBB6ED1B2679680096924F /* search_bar_background_3x.png in Resources */,
 				72BBB6FE1B2679680096924F /* stepper_and_segment_background_3x.png in Resources */,
 				72BBB6EB1B2679680096924F /* image_scenery4.jpg in Resources */,
@@ -753,7 +750,6 @@
 				72BBB7101B2679680096924F /* text_view_attachment_3x.png in Resources */,
 				72BBB6FF1B2679680096924F /* stepper_and_segment_background_disabled_1x.png in Resources */,
 				72BBB6DF1B2679680096924F /* bookmark_icon_1x.png in Resources */,
-				72BBB71D1B2679E20096924F /* Main.storyboard in Resources */,
 				72BBB70F1B2679680096924F /* text_view_attachment_2x.png in Resources */,
 				72BBB7061B2679680096924F /* stepper_and_segment_segment_divider_1x.png in Resources */,
 				72BBB7001B2679680096924F /* stepper_and_segment_background_disabled_2x.png in Resources */,
@@ -947,7 +943,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "exerciseUICatalog/Supporting files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -961,7 +957,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "exerciseUICatalog/Supporting files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
