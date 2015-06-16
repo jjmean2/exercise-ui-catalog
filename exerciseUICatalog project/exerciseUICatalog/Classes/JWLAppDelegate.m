@@ -25,6 +25,7 @@ void CGRectPrint(CGRect rect, NSString *name) {
 @implementation JWLAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
     NSLog(@"== %@, %@ start =======================", self, NSStringFromSelector(_cmd));
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>F4D885CE-4BB3-4582-85F2-7640E71DE6AF</string>
+	<key>IDESourceControlProjectName</key>
+	<string>exerciseUICatalog</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>0303FDF1730F19B2DFEB314DDA1126F1F877888B</key>
+		<string>github.com:jwlee9790/exerciseUICatalog.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>exerciseUICatalog project/exerciseUICatalog.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>0303FDF1730F19B2DFEB314DDA1126F1F877888B</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:jwlee9790/exerciseUICatalog.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>0303FDF1730F19B2DFEB314DDA1126F1F877888B</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>0303FDF1730F19B2DFEB314DDA1126F1F877888B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>exerciseUICatalog</string>
+		</dict>
+	</array>
+</dict>
+</plist>
